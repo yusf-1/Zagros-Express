@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account - Zagros Express</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo h1 {
+            color: #2c3e50;
+            font-size: 28px;
+        }
+        .logo p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+        }
+        .warning-box strong {
+            color: #856404;
+        }
+        .warning-box p {
+            color: #856404;
+            margin-top: 10px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.3);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        .checkbox-group label {
+            margin: 0;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        button {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .submit-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .submit-btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+        .reset-btn {
+            background-color: #95a5a6;
+            color: white;
+        }
+        .reset-btn:hover {
+            background-color: #7f8c8d;
+        }
+        .info-section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+        .info-section h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .info-section ul {
+            margin-left: 20px;
+            color: #34495e;
+        }
+        .info-section li {
+            margin-bottom: 8px;
+        }
+        .contact-info {
+            background-color: #d5f4e6;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+        .contact-info strong {
+            color: #27ae60;
+        }
+        .status-message {
+            display: none;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .status-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        .status-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        .required {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>🚚 Zagros Express</h1>
+            <p>Account Deletion Request</p>
+        </div>
+
+        <h2>Delete Your Account</h2>
+
+        <div class="warning-box">
+            <strong>⚠️ Important:</strong>
+            <p>Deleting your account is permanent and cannot be undone. Your account and all associated data will be permanently removed from our system.</p>
+        </div>
+
+        <form id="deletionForm">
+            <div class="form-group">
+                <label for="phone">Registered Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g., +1234567890" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="reason">Reason for Deletion (Optional)</label>
+                <textarea id="reason" name="reason" placeholder="Please tell us why you want to delete your account (optional)"></textarea>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="acknowledge" name="acknowledge" required>
+                <label for="acknowledge">I understand that this action is permanent and cannot be undone</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" id="confirm" name="confirm" required>
+                <label for="confirm">I confirm that I want to delete my account and all associated data</label>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="submit-btn">Submit Deletion Request</button>
+                <button type="reset" class="reset-btn">Clear Form</button>
+            </div>
+
+            <div class="status-message" id="statusMessage"></div>
+        </form>
+
+        <div class="info-section">
+            <h3>What Will Be Deleted:</h3>
+            <ul>
+                <li>Your account profile and login credentials</li>
+                <li>Personal information (name, phone number, email, addresses)</li>
+                <li>Complete order history</li>
+                <li>Payment methods and billing information</li>
+                <li>All preferences and settings</li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <strong>📧 Processing Time:</strong>
+            <p>We will process your deletion request within 7 days and confirm via WhatsApp or email.</p>
+        </div>
+
+        <div class="contact-info">
+            <strong>📞 Need Help?</strong>
+            <p>If you have any questions, contact us at: <strong>zagros3321@gmail.com</strong></p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('deletionForm');
+        const statusMessage = document.getElementById('statusMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value;
+            const reason = document.getElementById('reason').value;
+
+            // Create email content
+            const emailBody = `\nAccount Deletion Request\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\nReason: ${reason || 'Not provided'}\n\nTimestamp: ${new Date().toLocaleString()}\n            `;
+
+            // Send email via mailto
+            const mailtoLink = `mailto:zagros3321@gmail.com?subject=Account%20Deletion%20Request%20-%20${encodeURIComponent(name)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Show success message
+            statusMessage.className = 'status-message success';
+            statusMessage.textContent = '✓ Your deletion request has been prepared. Your email client will open automatically. Please send the email to complete your request.';
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Clear form after delay
+            setTimeout(() => {
+                form.reset();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
