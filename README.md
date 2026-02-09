@@ -1,1 +1,50 @@
 # Zagros-Express
+Privacy Policy
+Last updated: February 2026
+
+Introduction
+ZAGROSS EXPRESS ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our mobile application and services.
+
+Information We Collect
+We may collect information about you in various ways, including:
+
+Personal Data: Name, phone number, WhatsApp number, and shipping addresses you provide when using our services.
+Order Information: Details about your shipping orders, product information, and delivery preferences.
+Device Information: Device type, operating system, and unique device identifiers.
+Usage Data: Information about how you use our application.
+How We Use Your Information
+We use the information we collect to:
+
+Process and manage your shipping orders
+Communicate with you about your orders and services
+Send you order updates via WhatsApp
+Improve our application and services
+Comply with legal obligations
+Information Sharing
+We do not sell, trade, or rent your personal information to third parties. We may share your information with:
+
+Shipping partners necessary to complete your orders
+Service providers who assist in operating our application
+Legal authorities when required by law
+Data Security
+We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.
+
+Your Rights
+You have the right to:
+
+Access your personal information
+Correct inaccurate data
+Request deletion of your data
+Withdraw consent at any time
+Children's Privacy
+Our services are not intended for individuals under the age of 13. We do not knowingly collect personal information from children under 13.
+
+Changes to This Policy
+We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+
+Contact Us
+If you have questions about this Privacy Policy, please contact us:
+Email: privacy@zagrossexpress.com
+WhatsApp: Contact through the app
+
+GPT-5.2-Codex • 0.9x
